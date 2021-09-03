@@ -16,13 +16,14 @@ namespace RenameExcelFileFromTab
     class Program
     {
         static void Main(string[] args)
+
         {
             var path = @"C:\Users\CHowitt01\Downloads\Wait List.xlsx";
             using (var package = new ExcelPackage(new FileInfo(path)))
 
             {
                 var firstSheet = package.Workbook.Worksheets["WL Done"];
-                Console.WriteLine($"Cell A2 Value   : {firstSheet.Cells["G2"].Text}");
+                Console.WriteLine(firstSheet.Cells["G2"].Text);
 
             }
 
